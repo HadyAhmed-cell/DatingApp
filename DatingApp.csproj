@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="client\tsconfig.app.json" />
+    <Content Remove="client\tsconfig.json" />
+    <Content Remove="client\tsconfig.spec.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
