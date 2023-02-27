@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DatingApp.Controllers
 {
-
     public class BuggyController : BaseApiController
     {
         private readonly DataContext _context;
@@ -21,6 +20,7 @@ namespace DatingApp.Controllers
         {
             return "secrets text";
         }
+
         [HttpGet("not-found")]
         public ActionResult<AppUser> GetNotFound()
         {
@@ -33,11 +33,10 @@ namespace DatingApp.Controllers
 
             return thing;
         }
+
         [HttpGet("server-error")]
         public ActionResult<string> GetServerError()
         {
-
-
             var thing = _context.Users.Find(-1);
 
             var thingToReturn = thing.ToString();

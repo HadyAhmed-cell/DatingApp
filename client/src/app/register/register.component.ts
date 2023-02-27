@@ -12,7 +12,6 @@ export class RegisterComponent {
   model: any = {}
 
   constructor(private accountService: AccountService, private toaster: ToastrService) {
-
   }
 
   register() {
@@ -21,11 +20,10 @@ export class RegisterComponent {
         this.cancel();
       },
       error: error => this.toaster.error(error.error)
-      })
+    })
   }
 
   cancel() {
     this.cancelRegister.emit(false);
   }
-
 }

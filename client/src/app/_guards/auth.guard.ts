@@ -9,7 +9,6 @@ import { AccountService } from '../_services/account.service';
 })
 export class AuthGuard implements CanActivate {
   constructor(private accountService: AccountService, private toaster:ToastrService) {
-
   }
 
   canActivate(): Observable<boolean> {
@@ -25,5 +24,4 @@ export class AuthGuard implements CanActivate {
       })
       );
   }
-  
 }

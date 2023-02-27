@@ -9,7 +9,6 @@ using System.Text;
 
 namespace DatingApp.Controllers
 {
-
     public class AccountController : BaseApiController
     {
         private readonly DataContext _context;
@@ -22,12 +21,10 @@ namespace DatingApp.Controllers
         }
 
         [HttpPost("register")] // Post: api/Account/register
-
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
             if ( await UserExists(registerDto.Username) )
                 return BadRequest("Username is Taken");
-
 
             using var hmac = new HMACSHA512();
 

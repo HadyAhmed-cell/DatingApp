@@ -17,16 +17,15 @@ const routes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
-      { path: 'members', component: MemberListComponent},
+      { path: 'members', component: MemberListComponent },
       { path: 'members/:id', component: MemberDetailComponent },
       { path: 'lists', component: ListsComponent },
       { path: 'messages', component: MessagesComponent },
-      ]
+    ]
   },
   { path: 'errors', component: TestErrorComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: 'server-error', component: ServerErrorComponent },
-  
 
   { path: '**', component: NotFoundComponent, pathMatch: 'full' },
 ];
@@ -37,5 +36,4 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule {
-
 }

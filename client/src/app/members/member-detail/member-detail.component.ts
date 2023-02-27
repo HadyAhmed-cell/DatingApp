@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./member-detail.component.css']
 })
 export class MemberDetailComponent {
-
 }
